@@ -12,16 +12,15 @@ modules:
       - source: system
         destination: /
 
-  # CHINHS GOIC CHUAN AN TOAN DE BLUEBUILD KHONG BAO LOI
-  - type: dnf
+  # DUNG MODULE RPM-OSTREE CHUAN CUA BLUEBUILD
+  - type: rpm-ostree
     remove:
-      packages:
-        - waydroid
-        - lutris
-        - steam
-        - btrfs-assistant
-        - firewalld-gui
+      - gnome-tour
+      - gnome-weather
+      - gnome-maps
+      - cheese
 
+  # GO APP FLATPAK HE THONG
   - type: default-flatpaks
     configurations:
       notify: true
