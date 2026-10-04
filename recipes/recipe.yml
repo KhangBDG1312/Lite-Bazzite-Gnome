@@ -18,5 +18,3 @@ modules:
       scope: system
     install:
       - org.mozilla.firefox
-
-  - type: signing
