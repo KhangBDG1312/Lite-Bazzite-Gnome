@@ -16,14 +16,14 @@ modules:
   - type: dnf
     remove:
       packages:
-        # Trong thu muc "Abandoned" (Anh 2)
+        # Trong thu muc "Abandoned"
         - waydroid
         - lutris
 
-        # Trong thu muc "Games" (Anh 3)
+        # Trong thu muc "Games"
         - steam
 
-        # Trong thu muc "He Thong" (Anh 1)
+        # Trong thu muc "He Thong"
         - btrfs-assistant
         - firewalld-gui
         - malcontent-control
