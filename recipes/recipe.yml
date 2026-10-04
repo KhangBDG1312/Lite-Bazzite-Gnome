@@ -12,22 +12,10 @@ modules:
       - source: system
         destination: /
 
-  # DUNG MODULE RPM-OSTREE CHUAN CUA BLUEBUILD
-  - type: rpm-ostree
-    remove:
-      - gnome-tour
-      - gnome-weather
-      - gnome-maps
-      - cheese
-
-  # GO APP FLATPAK HE THONG
   - type: default-flatpaks
     configurations:
       notify: true
       scope: system
-    remove:
-      - com.discordapp.Discord
-      - net.brew_brew.BoldBrew
     install:
       - org.mozilla.firefox
 
