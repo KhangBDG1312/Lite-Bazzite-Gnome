@@ -1,7 +1,7 @@
 ---
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: Lite-Bazzite-Gnome
-description: Ban Bazzite GNOME sieu nhe - Duyen sach app rac cho ThinkPad
+description: Ban Bazzite GNOME sieu nhe cho ThinkPad
 
 base-image: ghcr.io/ublue-os/bazzite-gnome
 image-version: latest
@@ -12,25 +12,16 @@ modules:
       - source: system
         destination: /
 
-  # GO SACH DANG APP TRONG ANH CHUP
+  # CHINHS GOIC CHUAN AN TOAN DE BLUEBUILD KHONG BAO LOI
   - type: dnf
     remove:
       packages:
-        # Trong thu muc "Abandoned"
         - waydroid
         - lutris
-
-        # Trong thu muc "Games"
         - steam
-
-        # Trong thu muc "He Thong"
         - btrfs-assistant
         - firewalld-gui
-        - malcontent-control
-        - bazzite-documentation
-        - bazzite-portal
 
-  # GO CAC FLATPAK CHEN SAN TRONG HE THONG
   - type: default-flatpaks
     configurations:
       notify: true
